@@ -1,0 +1,272 @@
+<div ng-controller="statisticController" id="content">
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <li ng-click="repaint('plotNutrients')" class="active"><a data-target="#nutrients" data-toggle="tab">Nutrients</a></li> 
+        <li ng-click="repaint('plotMiniral')"><a data-target="#miniral" data-toggle="tab">Miniral</a></li>
+        <li ng-click="repaint('plotVitamin')"><a data-target="#vitamin" data-toggle="tab">Vitamin</a></li>
+        <li ng-click="repaint('plotFatAcid')"><a data-target="#fatAcid" data-toggle="tab">Fat Acid</a></li>
+        <li ng-click="repaint('plotBody')"><a data-target="#body" data-toggle="tab">Body</a></li>
+        <li ng-click="repaint('plotMeasurements')"><a data-target="#measurements" data-toggle="tab">Measurements</a></li> 
+    </ul>
+    <div class="col-md-12">
+        <div class="tab-content">
+            <div class="tab-pane active" id="nutrients">
+                <div class="row">
+                    <div class="col-md-9 plot-container">
+                        <div ui-chart="dataStorage.data1" class="chart plotNutrients"></div>
+                    </div>
+                    <div class="col-md-3 button-container">
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Prótein (g)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Kolvetni (g)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Trefjaefni (g)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Sykur (g)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Viðbættur sykur (g)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>    
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Fita (g)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Vatn (g)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Kólesteról (mg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Alkóhól (g)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>      
+                    </div> 
+                </div> 
+            </div>
+            <div class="tab-pane" id="miniral">
+                <div class="row">
+                    <div class="col-md-9 plot-container">
+                        <div ui-chart="dataStorage.data2" class="chart plotMiniral"></div>
+                    </div>
+                    <div class="col-md-3 button-container">
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Magnesíum (mg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Joð (µg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Fosfór (mg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Járn (mg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Sink (mg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Kalk (mg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Kopar (mg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Natríum (mg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Selen (µg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="vitamin">
+                <div class="row">
+                    <div class="col-md-9 plot-container">
+                        <div ui-chart="dataStorage.data3" class="chart plotVitamin"></div>
+                    </div>
+                    <div class="col-md-3 button-container">
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">B2 - (mg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">B6 - (mg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">B - 12 (µg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">C - (mg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">D - (µg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">E - (mg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Retinol (µg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Beta-karótín (µg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Níasín (mg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Fólat (µg)</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>                                    
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="fatAcid">
+                <div class="row">
+                    <div class="col-md-9 plot-container">
+                        <div ui-chart="dataStorage.data4" class="chart plotFatAcid"></div>
+                    </div>
+                    <div class="col-md-3 button-container">
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Mettaðar</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Einómettaðar</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Fjölómettaðar</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Trans-Fitusýrur</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Fjölómettaðar n-3 langar</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Fjölómettaðar n-6</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Fjölómettaðar n-3</button>
+                            <input type="checkbox" class="hidden" />
+                        </span> 
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="body">
+                <div class="row">
+                     <div class="col-md-9 plot-container">
+                        <div ui-chart="dataStorage.data5" class="chart plotBody">></div>
+                    </div>
+                    <div class="col-md-3 button-container">
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Weight</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Body Fat %</button>
+                            <input type="checkbox" class="hidden" />
+                        </span> 
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Body Metabolic Rate</button>
+                            <input type="checkbox" class="hidden" />
+                        </span> 
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Body Mass Index</button>
+                            <input type="checkbox" class="hidden" />
+                        </span> 
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Body Lean Mass</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Body Fat Mass</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>  
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="measurements">
+                <div class="row">
+                    <div class="col-md-9 plot-container">
+                        <div ui-chart="dataStorage.data6" class="chart plotMeasurements"></div>
+                    </div>    
+                    <div class="col-md-3 button-container">
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Neck</button>
+                            <input type="checkbox" class="hidden" />
+                        </span> 
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Shoulder</button>
+                            <input type="checkbox" class="hidden" />
+                        </span> 
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Cheast</button>
+                            <input type="checkbox" class="hidden" />
+                        </span> 
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Bicep</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Forearm</button>
+                            <input type="checkbox" class="hidden" />
+                        </span> 
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Waist</button>
+                            <input type="checkbox" class="hidden" />
+                        </span> 
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Hips</button>
+                            <input type="checkbox" class="hidden" />
+                        </span> 
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Upper Thigh</button>
+                            <input type="checkbox" class="hidden" />
+                        </span> 
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Middle Thigh</button>
+                            <input type="checkbox" class="hidden" />
+                        </span> 
+                        <span class="button-checkbox" checker>
+                            <button type="button" class="btn" data-color="primary">Calf</button>
+                            <input type="checkbox" class="hidden" />
+                        </span>    
+                    </div>
+                </div> 
+            </div>      
+        </div>
+    </div>
+</div>

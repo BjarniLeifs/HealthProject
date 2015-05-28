@@ -1,0 +1,46 @@
+<div class="row" ng-controller="bodymeasurementsController">
+  <div class="col-md-9">
+     Your Body Measurements 
+    <div class="row">
+      <div class="col-md-4">
+        <img src="css/img/tape-measurement-sites.jpg" alt="Measurement info" height="auto" width="auto">
+      </div>
+      <div class="col-md-4">
+        <form role="form">
+          <div class="form-group">
+            <label for="todaysdate">Date:</label><br />
+            <label for="todaysweight">Weight:</label><br />
+            <label for="todaysbf">BF%:</label><br />          
+            <label for="neck">Neck:</label><br />           
+            <label for="shoulder">Shoulder:</label><br />           
+            <label for="chest">Chest:</label><br /> 
+            <label for="bicep">Bicep:</label><br />            
+            <label for="forearm">Forearm:</label><br />
+            <label for="waist">Waist:</label><br />             
+            <label for="hips">Hips:</label><br />        
+            <label for="uThigh">Upper Thigh:</label><br />   
+            <label for="mThigh">Middle Thigh:</labe><br /> 
+            <label for="Calf">Calf:</label><br />
+            <p></p>
+            <button type="submit" class="btn btn-default">Submit</button>      
+          </div>
+          </div class="col-md-4">
+            <input type="datetime-local" id="todaysdate" name="todaydate"><br />
+            <input type="number" id="todaysweight" min="0.0" step="0.1" max="1000"  name="wKg" placeholder=""> kg<br /> 
+            <input type="number" id="todaysweight" min="0.0" step="0.1" max="1000"  name="todaysbf" placeholder=""> %<br /> 
+            <input type="number" min="0.0" step="0.1" max="1000"  name="neck" placeholder=""> cm<br /> 
+            <input type="number" min="0.0" step="0.1" max="1000"  name="shoulder" placeholder=""> cm<br /> 
+            <input type="number" min="0.0" step="0.1" max="1000"  name="chest" placeholder=""> cm<br /> 
+            <input type="number" min="0.0" step="0.1" max="1000"  name="bicep" placeholder=""> cm<br /> 
+            <input type="number" min="0.0" step="0.1" max="1000"  name="forearm" placeholder=""> cm<br /> 
+            <input type="number" min="0.0" step="0.1" max="1000"  name="waist" placeholder=""> cm<br /> 
+            <input type="number" min="0.0" step="0.1" max="1000"  name="hips" placeholder=""> cm<br /> 
+            <input type="number" min="0.0" step="0.1" max="1000"  name="uThigh" placeholder=""> cm<br /> 
+            <input type="number" min="0.0" step="0.1" max="1000"  name="mThigh" placeholder=""> cm<br /> 
+            <input type="number" min="0.0" step="0.1" max="1000"  name="Calf" placeholder=""> cm<br /> 
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

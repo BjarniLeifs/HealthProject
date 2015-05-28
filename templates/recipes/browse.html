@@ -1,0 +1,113 @@
+<div class="container" ng-controller="browseController">
+	<div class="row clearfix main">
+		<div id="main-container" class="col-md-10 column">
+			<div class="row clearfix search">
+				<div id="main-container-search" class"=col-md-12 colum">
+					<form class="form-wrapper cf">
+				        <input type="text" placeholder="Search here..." ng-model="selected" ng-change="updateTypeHead()" focus>
+
+				        <div class="input-group-btn">
+					        <button class="btn btn-primary" type="submit">
+					        	<i class="glyphicon glyphicon-search"></i>
+					        </button>
+					    </div>
+				    </form> 
+				</div>
+			</div>
+
+			<div class="row clearfix browse">
+				<div class="browse-container col-md-12 column">
+					<div ng-repeat="foodItem in food | filter:selected" ng-click="showRecipe(foodItem._id)" class="block-container move-animation">
+						<div class="browse-block">
+							<div class="tag" ng-class="getType(foodItem['Fæðuflokkur'])"></div>
+							<img class="imgHeader" src="css/img/fresh_food.jpg">
+							<div class="title-container">
+								<h2 class="title" ng-bind='getName(foodItem.Name)'></h2>
+								<span class="subTitle" ng-bind='getSubName(foodItem.Name)'></span>
+							</div>
+							<div class="info-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet </div>
+							<div class="info">
+								<div class="info-row">
+									<div class="info-container">
+										<span class="head">Protein:<span class="value" ng-bind="checkName(foodItem['Prótein'])"></span></span>
+									</div>
+								</div>
+
+								<div class="info-row">
+									<div class="info-container">
+										<span class="head">Fat:<span class="value" ng-bind="checkName(foodItem['Fita'])"></span></span> 
+									</div>
+								</div>
+
+								<div class="info-row">
+									<div class="info-container">
+										<span class="head">Carbs: <span class="value" ng-bind="checkName(foodItem['Kolvetni, alls'])"></span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="sidebar" class="col-md-2 column">
+			<ul class="menu">
+				<li class="section">
+					<div class="section-container">
+						<ul>
+							<li class="title">Food Browser</li>
+							<li class="cr boolean">
+								<div>
+									<span class="name">Boolean A</span>
+									<div class="c">
+										<input type="checkbox" checked="checked">
+									</div>
+								</div>
+							</li>
+							<li class="cr boolean">
+								<div>
+									<span class="name">Boolean B</span>
+									<div class="c">
+										<input type="checkbox" checked="checked">
+									</div>
+								</div>
+							</li>
+							<li class="cr number range">
+								<div>
+									<span class="name">Range A - {{option.A}}</span>
+									<div class="c">
+										<div class="slider" ui-slider min="0" max="50" ng-model="option.A"></div>
+									</div>
+								</div>
+							</li>
+							<li class="cr number range">
+								<div>
+									<span class="name">Range B - {{option.B}}</span>
+									<div class="c">
+										<div class="slider" ui-slider min="0" max="50" ng-model="option.B"></div>
+									</div>
+								</div>
+							</li>
+							<li class="cr number range">
+								<div>
+									<span class="name">Range C - {{option.C}}</span>
+									<div class="c">
+										<div class="slider" ui-slider min="0" max="50" ng-model="option.C"></div>
+									</div>
+								</div>
+							</li>
+							<li class="cr number range">
+								<div>
+									<span class="name">Range D - {{option.D}}</span>
+									<div class="c">
+										<div class="slider" ui-slider="{range: true}" min="0" max="100" step="0.01" use-decimals ng-model="option.D"></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

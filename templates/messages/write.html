@@ -1,0 +1,33 @@
+	<div class="modal-dialog modal-sm" style="width: 45%">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Email messenger </h4></div>
+				<div class="modal-body">
+					<div class="bootbox-body">
+						<form class="bootbox-form">
+							<p>To: {{message.senName}}</p>
+							<ul>
+								<li ng-click="setRec(user)" ng-repeat="user in users">Nafn: {{user.local.name}}</li>
+							</ul>
+							<legend>Subject: </legend><input placeholder="Subject.." ng-model="message.title" style="margin: 2% "class="bootbox-input bootbox-input-text form-control" autocomplete="off" type="text">
+							
+							<legend>Whats up?</legend>
+							<div class="required-field-block">
+								<textarea rows="3" class="form-control" placeholder="And your message is?" ng-model="message.message"></textarea>
+								<div class="required-icon">
+									<div class="text">*</div>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button data-bb-handler="cancel" type="button" ng-click="$location.path('/#/')" class="btn btn-default">Cancel</button>
+					
+					<button data-bb-handler="confirm" type="button" ng-click="sendMessage()" class="btn btn-success">Save!</button>
+				</div>
+			</div>
+		</div>
+	</div>

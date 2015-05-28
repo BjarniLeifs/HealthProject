@@ -1,0 +1,300 @@
+<div id="content" class="messurements" ng-controller="skinfoldController">
+  <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+      <li class="active"><a data-target="#body" data-toggle="tab">My Body </a></li>
+      <li><a data-target="#jkP7" data-toggle="tab">Jackson-Pollock 7-point</a></li>
+      <li><a data-target="#jkP4" data-toggle="tab">Jackson-Pollock 4-points</a></li>
+      <li><a data-target="#dWp4" data-toggle="tab">Durnin-Womersley 4-points</a></li>
+      <li><a data-target="#activityMets" data-toggle="tab"></a></li>
+  </ul>
+  <div class="content-wraper">
+    <div id="tab-content" class="tab-content">
+        <div class="tab-pane active" id="body">
+    			<div class="col-md-12">
+        		<div class="row">
+          			<div class="body-display col-md-4">
+            			<img src="css/img/tape-measurement-sites.jpg" alt="Measurement info" height="auto" width="auto" />
+          			</div>
+                <div class="col-md-8">
+    	      			<form role="form" class="body-form" role="form">
+                    <div class="form-group">
+                      <label for="weight">Weight:</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="weight" placeholder="Weight">
+                        <span class="input-group-addon">kg</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="bodyFat">Body Fat:</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="bodyFat" placeholder="Body Fat">
+                        <span class="input-group-addon">%</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="neck">Neck:</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="neck" placeholder="Neck">
+                        <span class="input-group-addon">cm</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="shoulder">Shoulder:</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="shoulder" placeholder="Shoulder">
+                        <span class="input-group-addon">cm</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="chest">Chest:</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="chest" placeholder="Chest">
+                        <span class="input-group-addon">cm</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="bicep">Bicep:</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="bicep" placeholder="Bicep">
+                        <span class="input-group-addon">cm</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="forearm">Forearm:</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="forearm" placeholder="Forearm">
+                        <span class="input-group-addon">cm</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="waist">Waist:</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="waist" placeholder="Waist">
+                        <span class="input-group-addon">cm</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="hips">Hips:</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="hips" placeholder="Hips">
+                        <span class="input-group-addon">cm</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="upperThigh">Upper Thigh:</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="upperThigh" placeholder="Upper Thigh">
+                        <span class="input-group-addon">cm</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="middleThigh">Middle Thigh:</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="middleThigh" placeholder="Middle Thigh">
+                        <span class="input-group-addon">cm</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="calf">Calf:</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" id="calf" placeholder="Calf">
+                        <span class="input-group-addon">cm</span>
+                      </div>
+                    </div>
+    	        		</form>
+                </div>
+    	    		</div>
+    	  		</div>     
+        </div>
+
+        <div class="tab-pane" id="jkP7">
+          <div class="row">
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldSuprailiac.gif" alt="Suprailiac" height="140px" width="140px" />
+              <div class="input-group">
+                <input type="number" class="form-control" id="SkinfoldSuprailiac"  min="0" step="1" max="100000"  name="Suprailiac" placeholder=" Suprailiac">
+                <span class="input-group-addon">mm</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldAbdomen.gif" alt="Abdomen" height="140px" width="140px" />
+              <div class="input-group">
+                <input type="number" class="form-control" id="SkinfoldAbdomen" min="0" step="1" max="100000"  name="Abdomen" placeholder=" Abdomen">
+                <span class="input-group-addon">mm</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldChest.gif" alt="Chest" height="140px" width="140px" />
+              <div class="input-group">
+                <input type="number" class="form-control" id="SkinfoldChest" min="0" step="1" max="100000"  name="Chest" placeholder=" Chest">
+                <span class="input-group-addon">mm</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldAxilla.gif" alt="Axilla" height="140px" width="140px" />
+              <div class="input-group">
+                <input type="number" class="form-control" id="SkinfoldAxilla" min="0" step="1" max="100000"  name="axilla" placeholder=" Axilla">
+                <span class="input-group-addon">mm</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldSubscapula.gif" alt="Scapula" height="140px" width="140px" />
+              <div class="input-group">
+                <input type="number" class="form-control" id="SkinfoldSubscapula" min="0" step="1" max="100000"  name=" Subscapula" placeholder=" Scapula">
+                <span class="input-group-addon">mm</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldTriceps.gif" alt="Tricep" height="140px" width="140px" />
+              <div class="input-group">
+                <input type="number" class="form-control" id="SkinfoldTriceps" min="0" step="1" max="100000"  name="triceps" placeholder=" Tricep">
+                <span class="input-group-addon">mm</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldThigh.gif" alt="Thigh" height="140px" width="140px" />
+              <div class="input-group">
+                <input type="number" class="form-control" id="SkinfoldThigh" min="0" step="1" max="100000"  name="thigh" placeholder=" Thigh">
+                <span class="input-group-addon">mm</span>
+              </div>
+            </div> 
+            <div class="col-md-8" >
+              <table class="table table-bordered">
+                <tr>     
+                  <td>Body Fat</td>
+                  <td>19</td>
+                  <td>%</td>
+                </tr> 
+                <tr>
+                  <td>Fat Mass</td>
+                  <td>18</td>
+                  <td>kg</td>
+                </tr>
+                <tr>
+                  <td>Lean Mass</td>
+                  <td>77</td>
+                  <td>kg</td>
+                </tr>
+              </table>
+              <button type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="jkP4">
+          <div class="row">
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldSuprailiac.gif" alt="Suprailiac" height="140px" width="140px" />
+                <div class="input-group">
+                  <input type="number" class="form-control" id="SkinfoldSuprailiac" min="0" step="1" max="10000"  name="Suprailiac" placeholder=" Suprailiac">
+                  <span class="input-group-addon">mm</span>
+                </div>
+            </div>
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldAbdomen.gif" alt="Abdomen" height="140px" width="140px" />
+              <div class="input-group">
+                <input type="number" class="form-control" id="SkinfoldAbdomen" min="0" step="1" max="10000"  name="Abdomen" placeholder=" Abdomen">
+                <span class="input-group-addon">mm</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldTriceps.gif" alt="Tricep" height="140px" width="140px" />
+                <div class="input-group">
+                  <input type="number" class="form-control" id="SkinfoldTriceps" min="0" step="1" max="1000"  name="triceps" placeholder=" Tricep">
+                  <span class="input-group-addon">mm</span>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldThigh.gif" alt="Thigh" height="140px" width="140px" />
+                <div class="input-group">
+                  <input type="number" class="form-control" id="SkinfoldThigh" min="0" step="1" max="10000"  name="thigh" placeholder=" Thigh">
+                  <span class="input-group-addon">mm</span>
+                </div>
+            </div>
+            <div class="col-md-4" >
+              <table class="table table-bordered">
+                <tr>     
+                  <td>Body Fat</td>
+                  <td>19</td>
+                  <td>%</td>
+                </tr> 
+                <tr>
+                  <td>Fat Mass</td>
+                  <td>18</td>
+                  <td>kg</td>
+                </tr>
+                <tr>
+                  <td>Lean Mass</td>
+                  <td>77</td>
+                  <td>kg</td>
+                </tr>
+              </table>
+              <button type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="dWp4">
+          <div class="row">
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldSuprailiac.gif" alt="Suprailiac" height="140px" width="140px" />
+                <div class="input-group">
+                  <input type="number" class="form-control" id="SkinfoldSuprailiac" min="0" step="1" max="10000"  name="Suprailiac" placeholder=" Suprailiac">
+                  <span class="input-group-addon">mm</span>
+                </div>
+            </div>
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldSubscapula.gif" alt="Scapula" height="140px" width="140px" />
+              <div class="input-group">
+                <input type="number" class="form-control" id="SkinfoldSubscapula" min="0" step="1" max="10000"  name=" Subscapula" placeholder=" Scapula">
+                <span class="input-group-addon">mm</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldTriceps.gif" alt="Tricep" height="140px" width="140px" />
+              <div class="input-group">
+                <input type="number" class="form-control" id="SkinfoldTriceps" min="0" step="1" max="1000"  name="triceps" placeholder=" Tricep">
+                <span class="input-group-addon">mm</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img src="css/img/SkinfoldChest.gif" alt="Thigh" height="140px" width="140px" />
+              <div class="input-group">
+                <input type="number" class="form-control" id="SkinfoldBicep" min="0" step="1" max="10000"  name="bicep" placeholder=" Bicep">
+                <span class="input-group-addon">mm</span>
+              </div> 
+            </div>
+            <div class="col-md-4" >
+              <table class="table table-bordered">
+                <tr>     
+                  <td>Body Fat</td>
+                  <td>19</td>
+                  <td>%</td>
+                </tr> 
+                <tr>
+                  <td>Fat Mass</td>
+                  <td>18</td>
+                  <td>kg</td>
+                </tr>
+                <tr>
+                  <td>Lean Mass</td>
+                  <td>77</td>
+                  <td>kg</td>
+                </tr>
+              </table>
+              <button type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,663 @@
+<div id="nut-content" ng-controller="NutritionCtrl">
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <!-- <li ><a data-target="#how" data-toggle="tab">How to</a></li> -->
+        <li class="active"><a data-target="#mrp" data-toggle="tab">Nutrition options</a></li>
+        <!-- <li><a data-target="#mpp" data-toggle="tab">Meal Names</a></li> -->  
+        <li><a data-target="#nl" data-toggle="tab">Nutrition Label</a></li>
+    </ul>
+    <div id="my-tab-content" class="tab-content">
+        <div class="tab-pane" id="how">
+            <h1>Here you can read something about what you can do..... </h1>           
+        </div>
+        <div class="tab-pane" id="mpp">
+        	<div class="row">
+ 			 	<div class="col-md-8">
+
+				</div>
+			</div>			
+    	</div>
+        <div class="tab-pane active" id="mrp">
+        	<div class="row">
+			 	<div class="col-md-8">
+			 		<div class="row">
+			 			<div class="col-md-4">
+			 				<h3>Target nutrients</h3>
+			 			</div>
+			 			<div class="col-md-4"></div>
+			 			<div class="col-md-4"></div>
+			 		</div>
+			 		<div class="row">
+			 			<div class="col-md-4"></div>
+			 			<div class="col-md-4">Calories:</div>
+			 			<div class="col-md-4">
+			 				<div class="input-group">
+			 					<input type="number" id="calDay" min="0" step="1" max="50000" class="form-control" placeholder="Per Day" />
+			 				<span class="input-group-addon">kCal</span>
+			 				</div>	
+			 			</div> 			
+			 		</div>
+			 		<div class="row">
+			 			<div class="col-md-4">Adjustments for the day</div>
+			 			<div class="col-md-4"></div>
+			 			<div class="col-md-4"></div>
+			 		</div>
+			 		<div class="row">
+			 			<div class="col-md-4">Carbohydrate:</div>
+			 			<div class="col-md-4">
+							<div class="input-group">
+			 					<input type="number" id="calGram" min="0.1" step="0.1" max="10000" class="form-control" placeholder="Grams">
+							<span class="input-group-addon">gr</span>
+			 				</div>
+			 			</div>
+			 			<div class="col-md-4">
+							<div class="input-group">
+			 					<input type="number" id="carPerc" min="0" step="1" max="100" class="form-control" placeholder="Percent">
+							<span class="input-group-addon">%</span>
+			 				</div>
+			 			</div>
+			 		</div>
+			 		<div class="row">
+			 			<div class="col-md-4">Fat:</div>
+			 			<div class="col-md-4">
+			 				<div class="input-group">
+			 					<input type="number" id="fatGram" min="0.1" step="0.1" max="10000" class="form-control" placeholder="Grams">
+			 					<span class="input-group-addon">gr</span>
+			 				</div>
+			 			</div>
+			 			<div class="col-md-4">
+			 				<div class="input-group">
+			 					<input type="number" id="fatPerc" min="0" step="1" max="100" class="form-control" placeholder="Percent">
+			 					<span class="input-group-addon">%</span>
+			 				</div>
+			 			</div>
+			 		</div>
+			 		<div class="row">
+			 			<div class="col-md-4">Protein:</div>
+			 			<div class="col-md-4">
+			 				<div class="input-group">
+			 					<input type="number" id="proGram" min="0.1" step="0.1" max="10000" class="form-control" placeholder="Grams">
+			 					<span class="input-group-addon">gr</span>
+			 				</div>
+			 			</div>
+			 			<div class="col-md-4">
+							<div class="input-group">
+			 					<input type="number" id="proPerc" min="0" step="1" max="100" class="form-control" placeholder="Percent">
+								<span class="input-group-addon">%</span>
+			 				</div>
+			 			</div>
+			 		</div>
+					<form role="form" class="meal-form" role="form">
+    	      			<div class="row">
+							<div class="form-group">	
+								<div class="col-md-4">
+									
+								</div>
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-4">
+								</div>
+							</div>	
+    	      			</div>
+    	      			<div class="row">
+							<div class="form-group">	
+								<div class="col-md-4">Meal name (Optional)
+								</div>
+								<div class="col-md-4">
+									<div class="input-group">
+			                      		<input type="text" id="mealName-1" class="form-control" placeholder="Example: Breakfast " />
+										<span class="input-group-addon"><span class="glyphicon glyphicon-cutlery"></span></span>	
+		                      		</div>
+								</div>
+								<div class="col-md-4">
+									<div class="input-group">
+			                        	<input type="number" class="form-control" id="mealName-1" min="0" step="1" max="100" placeholder="% of Day.">
+				                        <span class="input-group-addon">%</span>
+			                      	</div>	
+								</div>
+							</div>	
+    	      			</div>
+    	      			<div class="row">
+							<div class="form-group">
+								<div class="col-md-4">Meal name (Optional)
+								</div>
+								<div class="col-md-4">
+									<div class="input-group">
+		                      			<input type="text" id="mealName-2" class="form-control" placeholder="Example: Brunch " />
+		                      			<span class="input-group-addon"><span class="glyphicon glyphicon-cutlery"></span></span>
+		                      		</div>	
+								</div>
+								<div class="col-md-4">
+									<div class="input-group">
+			                        	<input type="number" class="form-control" id="mealName-2" min="0" step="1" max="100" placeholder="% of Day.">
+				                        <span class="input-group-addon">%</span>
+			                      	</div>	
+								</div>
+							</div>	
+    	      			</div>
+    	      			<div class="row">
+							<div class="form-group">
+								<div class="col-md-4">Meal name (Optional)
+								</div>	
+								<div class="col-md-4">
+									<div class="input-group"> 
+		                      			<input type="text" id="mealName-3" class="form-control" placeholder="Example: Launch" />
+		                      			<span class="input-group-addon"><span class="glyphicon glyphicon-cutlery"></span></span>
+		                      		</div>	
+								</div>
+								<div class="col-md-4">
+									<div class="input-group">
+			                        	<input type="number" class="form-control" id="mealName-3" min="0" step="1" max="100" placeholder="% of Day.">
+				                        <span class="input-group-addon">%</span>
+			                      	</div>	
+								</div>
+							</div>	
+    	      			</div>
+    	      			<div class="row">
+							<div class="form-group">
+								<div class="col-md-4">Meal name (Optional)
+								</div>	
+								<div class="col-md-4">
+									<div class="input-group"> 
+		                      			<input type="text" id="mealName-4" class="form-control" placeholder="Example: Coffie " />
+		                      			<span class="input-group-addon"><span class="glyphicon glyphicon-cutlery"></span></span>
+		                      		</div>	
+								</div>
+								<div class="col-md-4">
+									<div class="input-group">
+			                        	<input type="number" class="form-control" id="mealName-4" min="0" step="1" max="100" placeholder="% of Day.">
+				                        <span class="input-group-addon">%</span>
+			                      	</div>	
+								</div>
+							</div>	
+    	      			</div>	
+		                <div class="row">
+							<div class="form-group">
+								<div class="col-md-4">Meal name (Optional)
+								</div>	
+								<div class="col-md-4">
+									<div class="input-group">
+		                      			<input type="text" id="mealName-5" class="form-control" placeholder="Example: Dinner " />
+		                      			<span class="input-group-addon"><span class="glyphicon glyphicon-cutlery"></span></span>
+		                      		</div>	
+								</div>
+								<div class="col-md-4">
+									<div class="input-group">
+			                        	<input type="number" class="form-control" id="mealName-5" min="0" step="1" max="100" placeholder="% of Day.">
+				                        <span class="input-group-addon">%</span>
+			                      	</div>	
+								</div>
+							</div>	 
+    	      			</div>      	
+		                <div class="row">
+							<div class="form-group">
+								<div class="col-md-4">Meal name (Optional)
+								</div>	
+								<div class="col-md-4">
+									<div class="input-group"> 
+		                      			<input type="text" id="mealName-6" class="form-control" placeholder="Example: Late snakk " />
+		                      			<span class="input-group-addon"><span class="glyphicon glyphicon-cutlery"></span></span>
+		                      		</div>	
+								</div>
+								<div class="col-md-4">
+									<div class="input-group">
+			                        	<input type="number" class="form-control" id="mealName-6" min="0" step="1" max="100" placeholder="% of Day.">
+				                        <span class="input-group-addon">%</span>
+			                      	</div>	
+								</div>
+							</div>	
+    	      			</div>   
+    	      			<div class="row">
+							<div class="form-group">
+								<div class="col-md-4">Meal name (Optional)
+								</div>	
+								<div class="col-md-4">
+									<div class="input-group"> 
+		                      			<input type="text" id="mealName-7" class="form-control" placeholder="Example: Pre-workout " />
+		                      			<span class="input-group-addon"><span class="glyphicon glyphicon-cutlery"></span></span>
+		                      		</div>	
+								</div>
+								<div class="col-md-4">
+									<div class="input-group">
+			                        	<input type="number" class="form-control" id="mealName-7" min="0" step="1" max="100" placeholder="% of Day.">
+				                        <span class="input-group-addon">%</span>
+			                      	</div>	
+								</div>
+							</div>	
+    	      			</div>	
+                    	<div class="row">
+							<div class="form-group">
+								<div class="col-md-4">Meal name (Optional)
+								</div>	
+								<div class="col-md-4">
+									<div class="input-group">
+		                      			<input type="text" id="mealName-8" class="form-control" placeholder="Example: Post-workout " />
+		                      			<span class="input-group-addon"><span class="glyphicon glyphicon-cutlery"></span></span>
+		                      		</div>	
+								</div>
+								<div class="col-md-4">
+									<div class="input-group">
+			                        	<input type="number" class="form-control" id="mealName-8" min="0" step="1" max="100" placeholder="% of Day.">
+				                        <span class="input-group-addon">%</span>
+			                      	</div>	
+								</div>	
+							</div>	
+    	      			</div>
+    	      			<div class="row">
+							<div class="form-group">
+								<div class="col-md-4">Meal name (Optional)
+								</div>	
+								<div class="col-md-4">
+									<div class="input-group">
+		                      			<input type="text" id="mealName-9" class="form-control" placeholder="Example: Vitamin " />
+		                      			<span class="input-group-addon"><span class="glyphicon glyphicon-cutlery"></span></span>
+		                      		</div>	
+								</div>
+								<div class="col-md-4">
+									<div class="input-group">
+			                        	<input type="number" class="form-control" id="mealName-9" min="0" step="1" max="100" placeholder="% of Day.">
+				                        <span class="input-group-addon">%</span>
+			                      	</div>	
+								</div>
+							</div>	
+    	      			</div>
+						<div class="row">
+							<div class="form-group">	
+								<div class="col-md-4">	
+								</div>
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-4">
+									<button type="button" class="btn btn-primary">Save</button>
+								</div>
+								
+							</div>	
+    	      			</div>	
+    	      		</form>
+			 	</div>
+			 	<div class="col-md-4">
+			 	</div>
+			</div>
+    	</div>
+    	<div class="tab-pane" id="nl">
+    		<div class="row">
+    			<div class="col-md-8" id="container-n1All">
+    				<div class="row">
+						<div class="col-md-4">
+							<div id="container-nutr">
+								<div class="col-name">Næringarefni</div>
+								<span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Prótein (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Fita (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Kolvetni (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Trefjaefni (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Sykrur  (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Viðbættur sykur (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Kólesteról (mg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Vatn  (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Alkóhól (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-4">
+                       	 	<div id="container-miniral">	
+								<div class="col-name">Steinefni</div>
+								<span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Magnesíum (mg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Joð (µg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Fosfór (mg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Járn (mg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Sink (mg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Kalk (mg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Kopar (mg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Natríum (mg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Selen (µg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>
+	                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                        	<div id="container-fats">	
+								<div class="col-name">Fitusýrur</div>
+								<span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Mettaðar (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Einómettaðar (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Fjölómettaðar (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Ómega-6 (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Ómega-3 (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Trans (g)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                        </div>
+	                    </div>
+	                    <div class="col-md-4">
+	                        <div id="conainer-vit">
+	                            <div class="col-name">Vítamín</div>
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">B2-vítamín (mg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">B6-vítamín (mg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">B-12 vítamín (µg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">C-vítamín (mg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">D-vítamín (µg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">E-vítamín (mg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Retinol (µg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Beta-karótín (µg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Níasín (mg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+	                            <span class="button-checkbox" checker>
+	                                <button type="button" class="btn" data-color="primary">Fólat (µg)</button>
+	                               	<input type="checkbox" class="hidden" />
+	                            </span>	
+							</div>
+						</div>	
+    				</div>
+    			</div>
+    			<div class="col-md-4">
+					<div class="nutrition-label">
+						<section class="performance-facts">
+							<header class="performance-facts__header">
+								<h1 class="performance-facts__title">Nutrition Facts</h1>
+								<p>Serving Size 1/2 cup (about 82g)
+								<p>Serving Per Container 8</p>
+							</header>
+							<table class="performance-facts__table">
+								<thead>
+									<tr>
+										<th colspan="3" class="small-info">
+											Amount Per Serving
+										</th>
+									</tr>
+								</thead>
+									<tbody>
+										<tr>
+											<th colspan="2">
+												<b>Calories</b>
+												200
+											</th>
+											<td>
+												Calories from Fat
+												130
+											</td>
+										</tr>
+										<tr class="thick-row">
+											<td colspan="3" class="small-info">
+												<b>% Daily Value*</b>
+											</td>
+										</tr>
+										<tr>
+											<th colspan="2">
+												<b>Total Fat</b>
+												14g
+											</th>
+											<td>
+												<b>22%</b>
+											</td>
+										</tr>
+										<tr>
+											<td class="blank-cell">
+											</td>
+											<th>
+												Saturated Fat
+												9g
+											</th>
+											<td>
+												<b>22%</b>
+											</td>
+										</tr>
+										<tr>
+											<td class="blank-cell">
+											</td>
+											<th>
+												Trans Fat
+												0g
+											</th>
+											<td>
+											</td>
+										</tr>
+										<tr>
+											<th colspan="2">
+												<b>Cholesterol</b>
+												55mg
+											</th>
+											<td>
+												<b>18%</b>
+											</td>
+										</tr>
+										<tr>
+											<th colspan="2">
+												<b>Sodium</b>
+												40mg
+											</th>
+											<td>
+												<b>2%</b>
+											</td>
+										</tr>
+										<tr>
+											<th colspan="2">
+											<b>Total Carbohydrate</b>
+											17g
+											</th>
+											<td>
+												<b>6%</b>
+											</td>
+										</tr>
+										<tr>
+											<td class="blank-cell">
+											</td>
+											<th>
+												Dietary Fiber
+												1g
+											</th>
+											<td>
+												<b>4%</b>
+											</td>
+										</tr>
+										<tr>
+											<td class="blank-cell">
+											</td>
+											<th>
+												Sugars
+												14g
+											</th>
+											<td>
+											</td>
+										</tr>
+										<tr class="thick-end">
+											<th colspan="2">
+												<b>Protein</b>
+												3g
+											</th>
+											<td>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<table class="performance-facts__table--grid">
+									<tbody>
+										<tr>
+											<td colspan="2">
+												Vitamin A
+												10%
+											</td>
+											<td>
+												Vitamin C
+												0%
+											</td>
+										</tr>
+										<tr class="thin-end">
+											<td colspan="2">
+												Calcium
+												10%
+											</td>
+											<td>
+												Iron
+												6%
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<p class="small-info">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs:</p>
+								<table class="performance-facts__table--small small-info">
+									<thead>
+										<tr>
+											<td colspan="2"></td>
+											<th>Calories:</th>
+											<th>2,000</th>
+											<th>2,500</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th colspan="2">Total Fat</th>
+											<td>Less than</td>
+											<td>65g</td>
+											<td>80g</td>
+										</tr>
+										<tr>
+											<td class="blank-cell"></td>
+											<th>Saturated Fat</th>
+											<td>Less than</td>
+											<td>20g</td>
+											<td>25g</td>
+										</tr>
+										<tr>
+											<th colspan="2">Cholesterol</th>
+											<td>Less than</td>
+											<td>300mg</td>
+											<td>300 mg</td>
+										</tr>
+										<tr>
+											<th colspan="2">Sodium</th>
+											<td>Less than</td>
+											<td>2,400mg</td>
+											<td>2,400mg</td>
+										</tr>
+										<tr>
+											<th colspan="3">Total Carbohydrate</th>
+											<td>300g</td>
+											<td>375g</td>
+										</tr>
+										<tr>
+											<td class="blank-cell"></td>
+											<th colspan="2">Dietary Fiber</th>
+											<td>25g</td>
+											<td>30g</td>
+										</tr>
+									</tbody>
+								</table>
+								<p class="small-info">	
+								Calories per gram:
+								</p>
+								<p class="small-info text-center">
+									Fat 9
+									&bull;
+									Carbohydrate 4
+									&bull;
+									Protein 4
+								</p>
+							</section>
+						</div>
+ 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+</script> 

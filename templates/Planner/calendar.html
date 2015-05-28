@@ -1,0 +1,40 @@
+<div class="row clearfix" ng-controller="CalendarCtrl">
+	<div  class="col-md-10 column calendar-container">
+		<div class="wraper" ng-style='claendarWraper'>
+			<div id="calender" ui-calendar="calendarConfig" ng-model='eventSources' calendar="planner"></div>
+		</div>
+	</div>
+	<div class="col-md-2 column list-container">
+		<div class="list">
+			<div class="lines"></div>
+
+			<ul class='sublist'>
+				<li class='header'>Food:</li>
+				<li ng-repeat="food in list.Food">
+					<span class="remove glyphicon glyphicon-remove" ng-click="listRemove($index, 'Food')"></span>
+					<div type='food' data-drag="true" jqyoui-draggable="{animate:true}" data-jqyoui-options="{revert: 'invalid'}">
+						{{food.name}}
+					</div>
+				</li>
+			</ul>
+			<ul class='sublist'>
+				<li class='header'>Recipes:</li>
+				<li ng-repeat="recipe in list.Recipes">
+					<span class="remove glyphicon glyphicon-remove" ng-click="listRemove($index, 'Recipes')"></span>
+					<div type='recipes' data-drag="true" jqyoui-draggable="{animate:true}" data-jqyoui-options="{revert: 'invalid'}">
+						{{recipe.name}}
+					</div>
+				</li>
+			</ul>
+			<ul class='sublist'>
+				<li class='header'>Activities:</li>
+				<li ng-repeat="act in list.Activities">
+					<span class="remove glyphicon glyphicon-remove" ng-click="listRemove($index, 'Activities')"></span>
+					<div type='activities' data-drag="true" jqyoui-draggable="{animate:true}" data-jqyoui-options="{revert: 'invalid'}">
+						{{act.name}}
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,96 @@
+	<div id="blogContainer" class="col-md-8 column" ng-controller="blogController"> 
+		<div class="row">
+			<div id="blogContainer-menu" class="menu">
+				<div ng-repeat="blog in blogs" class="menu-blog-fluid well span6">
+					<div style=""class="menu-blog-fluid-title">
+						<h1> {{blog.title}}	</h1>
+					</div>
+					<!-- <div class="imgUser">
+						<img src="http://placehold.it/40x35" > {{}}
+					</div> -->
+					<p> {{blog.body}} </p>
+					<span class="badge">{{blog.date}}</span>
+					<div ng-repeat="tag in blog.tags"class="pull-right">
+						<span class="label label-primary">{{tag}}</span>
+						<!--<span class="label label-default">{{alice}}</span>  
+							<span class="label label-success">{{blog}}</span> 
+							<span class="label label-info">{{personal}}</span> 
+							<span class="label label-warning">{{Warning}}</span>
+							<span class="label label-danger">{{Danger}}</span>
+						-->
+					</div>         
+					<hr>
+					<ul>
+						<li>
+							<button ng-click="favsCounter(blog._id)" style="padding-left: 10%;padding-right: 10%;" class="heart well span2">
+								<span class="glyphicon glyphicon-heart"></span>
+								<span class="glyphicon-class">{{ blog.meta.favs }}</span>
+							</button>
+						</li>
+						<li>
+
+<!-- 											<span class="label label-info"> 78 </span>
+					<span class="glyphicon glyphicon-comment"></span>
+
+											-->
+
+
+
+
+							
+								<div class="panel-body">
+								<div ng-repeat="comment in blog.comments"class="viewComment">
+									<div class="panel panel-default widget">
+										<ul class="list-group">
+													<li class="list-group-item">
+														<div class="row">
+															<div class="col-xs-10 col-md-11">
+																<div>
+																	<div class="mic-info">
+																		By: <a href="#"> {{comment.commenter}}Bhaumik Patel</a> on {{comment.date}}
+																	</div>
+																</div>
+																<div class="comment-text">
+																	{{comment.body}}
+																</div>
+																<div class="action">
+																	<button type="button" class="btn btn-primary btn-xs" title="Edit">
+																		<span class="glyphicon glyphicon-pencil"></span>
+																	</button>
+																	<button type="button" class="btn btn-success btn-xs" title="Approved">
+																		<span class="glyphicon glyphicon-ok"></span>
+																	</button>
+																	<button type="button" class="btn btn-danger btn-xs" title="Delete">
+																		<span class="glyphicon glyphicon-trash"></span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>	
+												</div>
+											</div>
+										</div>
+										<span class="glyphicon glyphicon-comment"></span>
+										<span class="glyphicon-class">Write a comment</span>
+										<div class="comment-showComment">
+											<div type="input" class="comment-showComment-field">
+												<div class="input-group" style="width: 100%;">
+													<input  ng-model="blog.comment"type="text" class="form-control" name="validate-text" id="validate-text" style="border-radius: 21px;"placeholder="Do you have any comments?">
+													<button type="button" ng-click="addComment(blog._id, blog.comment)" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i></button>
+
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+
+
+							</ul>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+

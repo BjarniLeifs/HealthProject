@@ -1,0 +1,148 @@
+<div id="Container" class="container">
+	<div class="container-main row clearfix">
+		<div id="Container-Left" class="col-md-2 column">
+			<nav id="Container-Left-Menu">
+				<div class="cp-fix">
+					<ul class="cp-menu">
+						
+						<!-- Profile Box -->
+
+						<li class="profile-box">
+							<div class="profile-image-wrapper">
+								<img src="css/img/defaultUser.jpg" class="img-circle">
+							</div>
+							<div class="profileContainer-userInfo">
+								<h2> {{user.name}} </h2>
+								<div class="row-fluid">
+									<p>User</p>
+								</div>
+							</div>
+							<div class="profile-footer">
+								<div class='icon-wrapper'>
+									<span class="glyphicon glyphicon-cog" ng-click="setTemplate('Me/settings.html', true)"></span>
+								</div>
+								<div class='icon-wrapper'>
+									<i class="fa fa-eye"></i>
+								</div>
+								<div class='icon-wrapper'>
+									<span class="glyphicon glyphicon-envelope" ng-click="setTemplate('messages/messages.html', true)"></span>
+								</div>
+								
+
+							</div>
+						</li>
+						
+						<!-- Task - 1 [Profile]-->
+
+						<li class="cp-item" ng-click="setTemplate('Me/profile.html', true, $event)">
+							<a class="accordion-toggle">
+								<span class="glyphicon glyphicon-user"></span><p>Profile</p>
+							</a>
+						</li>
+
+						<!-- Task - 2 [Stats]-->
+
+						<li class="cp-item" ng-click="setTemplate('stats/statistic.html', false, $event)">
+							<a class="accordion-toggle">
+								<span class="glyphicon glyphicon-stats"></span><p>Stats</p>
+							</a>
+						</li>
+
+						<!-- Task - 3 [Recipes]-->
+
+						<li class="accordion-heading cp-item">
+							<a class="accordion-toggle" data-toggle="collapse" data-target="#Recipes" data-parent="#Container-Left-Menu">
+								<span class="glyphicon glyphicon-book"></span><p>Recipes</p>
+							</a>
+						</li>
+						<li id="Recipes" class="accordion-body collapse" style="height:0px;">
+							<div class="accordion-inner">
+								<ul class="cp-submenu">
+									<li ng-click="setTemplate('recipes/browse.html', false, $event)">
+										Browse Recipes
+									</li>
+									<li ng-click="setTemplate('recipes/add.html', false, $event)">
+										Create Recipes
+									</li>
+									<li ng-click="setTemplate('noView.html', true, $event)">
+										My Recipes
+									</li>
+									<li ng-click="setTemplate('noView.html', true, $event)">
+										My Favorite Recipes
+									</li>
+								</ul>
+							</div>
+						</li>
+
+						<!-- Task - 4 [Planner]-->
+
+						<li class="cp-item" ng-click="setTemplate('Planner/calendar.html', false, $event)">
+							<a class="accordion-toggle">
+								<span class="glyphicon glyphicon-calendar"></span><p>Planner</p>
+							</a>
+						</li>
+
+						<!-- Task - 5 [Food]-->
+
+						<li class="cp-item" ng-click="setTemplate('recipes/browse.html', false, $event)">
+							<a class="accordion-toggle">
+								<span class="glyphicon glyphicon-cutlery"></span><p>Food</p>
+							</a>
+						</li>
+
+						<!-- Task - 6 [Trainers]-->
+
+						<li class="cp-item" ng-click="setTemplate('trainers.html', true, $event)">
+							<a class="accordion-toggle">
+								<span class="glyphicon glyphicon-eye-open"></span><p>Trainers</p>
+							</a>
+						</li>
+
+						<!-- Task - 7 [Measurements]-->
+
+						<li class="cp-item" ng-click="setTemplate('messurements/measurements.html', true, $event)">
+							<a class="accordion-toggle">
+								<span class="glyphicon glyphicon-list-alt"></span><p>Measurements</p>
+							</a>
+						</li>
+
+						<!-- Task - 8 [Activity]-->
+
+						<li class="cp-item" ng-click="setTemplate('messurements/metabolic.html', true, $event)">
+							<a class="accordion-toggle">
+								<span class="glyphicon glyphicon glyphicon-heart"></span><p>Activity</p>
+							</a>
+						</li>
+
+						<!-- Task - 8 [Goals]-->
+
+						<li class="cp-item" ng-click="setTemplate('food/nutritionopz.html', false, $event)">
+							<a class="accordion-toggle">
+								<i class="fa fa-trophy"></i><p>Goals</p>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</nav>
+		</div>
+			<div id="Container-Center" class="col-md-8 column" ng-repeat="template in templates" ng-class="{'filler': !isSideBar}">
+				<div ng-include="template.url" > 
+					<div class="block food">
+
+					</div>
+
+					<div class="block post">
+
+					</div>
+
+					<div class="block proPost">
+
+					</div>
+				</div>
+			</div>
+		<div id="Container-Right" class="col-md-2 column" ng-class="{'slider': !isSideBar}">
+			<div id="calender" ui-calendar="calendarConfig" ng-model='eventSources' calendar="timeline"></div>
+		</div>
+	</div>
+</div>

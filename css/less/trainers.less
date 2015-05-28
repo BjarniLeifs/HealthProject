@@ -1,0 +1,216 @@
+.trainerContainer {
+	position: absolute;
+	width: 100% !important;
+	padding: 0;
+	top: 0;
+	bottom: 0;
+
+	.main {
+		height: 100%;
+		background-color: red;
+		#main-trainerContainer {
+			height: 100%;
+			border-right: 1px solid #2c2c2c;
+
+			
+
+			.browse {
+				position: relative;
+				height: calc(~'100% + 4em');
+				background-color: #fff;
+
+				.browse-trainerContainer {
+					overflow-y: auto;
+					overflow-x: hidden;
+					width: 100%;
+					height: 100%;
+					padding: 10px;
+					margin-left: 5%;
+					margin-right: 5%;
+					margin-top: -5%;
+
+					.block-trainerContainer {
+						width: calc(100% / 2.1 - 20px);
+						height: 23em;
+						position: relative;
+						display: table-row-group;
+						float: left;
+						margin: 10px;
+						margin-top: 6%;
+
+					    .move-animation {
+					    	&.ng-enter {
+								-webkit-transition:0.5s linear all;
+								-moz-transition:0.5s linear all;
+								-o-transition:0.5s linear all;
+								transition:0.5s linear all;
+								opacity:0;
+
+								&.ng-enter-active {
+									opacity:1;
+								}
+						    }
+
+						    &.ng-move {
+								-webkit-transition:0.5s linear all;
+								-moz-transition:0.5s linear all;
+								-o-transition:0.5s linear all;
+								transition:0.5s linear all;
+								opacity:0;
+
+								&.ng-move-active {
+									opacity:1;
+								}
+						    }
+					    }
+
+						.move-animatio.ng-leave {
+						  -webkit-animation:0.5s hide;
+						  -moz-animation:0.5s hide;
+						  -o-animation:0.5s hide;
+						  animation:0.5s hide;
+						}
+
+						.browse-block {
+							display: inline-block;
+							z-index: 1000;
+							width: 100%;
+							height: 100%;
+							min-height: 1px;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
+							background-color: #f5f5f5;
+							border: 1px solid;
+							border-radius: 4px;
+							-moz-transition-property: width, height, margin;
+							-moz-transition-duration: 0.5s;
+							-webkit-transition-property: width, height, margin;
+							-webkit-transition-duration: 0.5s;
+							-o-transition-property: width, height, margin;
+							-o-transition-duration: 0.5s;
+							-transition-property: width, height, margin;
+							transition-duration: 0.5s;
+							-moz-box-flex:1.0; /* Firefox */
+-webkit-box-flex:1.0; /* Safari and Chrome */
+-ms-flex:1.0; /* Internet Explorer 10 */
+box-flex:1.0;
+
+							.imgHeader {
+								height: 230px;
+								width: 230px;
+								margin: 20px auto;
+								margin-bottom: 5px;
+								border: 1px solid gray;
+								display: block;
+							}
+
+							
+
+							&:hover {
+								width: 100%;
+								height: 28em;
+								margin-top: -1em;
+								overflow: hidden;
+								-moz-transition-duration: .1s;
+								-webkit-transition-duration: .1s;
+								-o-transition-duration: .1s;
+								transition-duration: .1s;
+								z-index: 1000000;
+								position: relative;
+								-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+							}
+
+							.title-trainerContainer {
+								text-align: center;
+								height: 4em;
+								background-color: #383838;
+								color: #fff;
+								border-top: 1px solid gray;
+								border-bottom: 1px solid gray;
+
+								.title {
+									margin: 0;
+									font-size: 130%;
+									font-weight: bolder;
+									padding-bottom: 5px;
+								}
+								.bn{
+									background-color:gray;
+								}
+
+								.subTitle {
+									position: relative;
+									top: -13px;
+									font-style: italic;
+									white-space: nowrap;
+									text-align: left;
+								}
+							}
+
+							.info-text {
+								width: 100%;
+								padding: 5px;
+							}
+
+							.info {
+								width: 100%;
+								height: 60px;
+								padding: 5px;
+								color: #000;
+								border-top: 1px solid #c6d0da;
+
+								.info-row {
+									width: 100%;
+									height: 24px;
+									display: inline;
+									
+									.info-container {
+										float: left;
+										display: inline-block;
+										width: 100%;
+
+										.head {
+											font-weight: bolder;
+
+
+											.value {
+												font-style: italic;
+												font-weight: normal;
+												float: right;
+												margin-right: 12px;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				
+			}
+		}
+	}
+}
+
+
+@keyframes hide {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+@-webkit-keyframes hide {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+@-moz-keyframes hide {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+@-o-keyframes hide {
+  from { opacity:1; }
+  to { opacity:0; }
+}

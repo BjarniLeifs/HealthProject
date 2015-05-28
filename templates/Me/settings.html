@@ -1,0 +1,55 @@
+<h2>Here you can change you basic info</h2>
+<div id="settingsContainer" class="col-md-12" ng-controller="profileController">
+	<div id="settingsContainer-img" class="col-md-5">
+		<div class="settingsContainer-img-wrapper">
+			<img src="css/img/defaultUser.jpg" class="img-circle">
+			<button type="button" class="btn btn-labeled btn-primary">
+				<div class="loadbtn">
+                	<span class="btn-label">
+                		<i class="glyphicon glyphicon-camera">
+                		</i>
+                	</span>
+                	Change image
+            	</div>
+              </button>
+
+
+            <br />
+		</div>
+	</div>
+	<div id="settingsContainer-info" class="col-md-5"
+		<div class="bootbox-body">
+			<form class="bootbox-form">
+				<h4>First name: </h4>
+				<input placeholder="First Name.." ng-model="profile.firstName" style="margin: 2% "class="bootbox-input bootbox-input-text form-control" autocomplete="off" type="text">
+
+				<h4>Last name: </h4>
+				<input placeholder="Last Name.." ng-model="profile.lastName"  style="margin: 2% " class="bootbox-input bootbox-input-text form-control" autocomplete="off" type="text">
+
+				<h4>Email: </h4>
+				<input placeholder="Email Name.."  ng-model="profile.email"  style="margin: 2% " class="bootbox-input bootbox-input-text form-control" autocomplete="off" type="text">
+				<h4>Your height: </h4>
+				<input placeholder="Your height.." ng-model="profile.height"  style="margin: 2% " class="bootbox-input bootbox-input-text form-control" autocomplete="off" type="text">
+				<h4>Your weight: </h4>
+				<input placeholder="Your weight.." ng-model="profile.weight"  style="margin: 2% " class="bootbox-input bootbox-input-text form-control" autocomplete="off" type="text">
+				<h4>And your birthday: </h4>	
+				<input placeholder="Your birthday.." ng-model="profile.birthday"  style="margin: 2% " class="bootbox-input bootbox-input-text form-control" autocomplete="off" type="text">
+
+
+
+			</form>
+			<div class="isTrainer">
+				 <input type="checkbox" name="trainer">I am a personal trainer!</input>
+			</div>
+
+			<div class="modal-footer">
+				<button data-bb-handler="cancel" type="button" class="btn btn-default">Cancel</button>
+
+				<button data-bb-handler="confirm" type="button" ng-click="trainer()" class="btn btn-success">trainer!</button>
+									
+				<button data-bb-handler="confirm" type="button" ng-click="changeInfo()" class="btn btn-success">Save!</button>
+			</div>
+	</div>
+</div>
+	
+

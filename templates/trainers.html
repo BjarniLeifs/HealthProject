@@ -1,0 +1,32 @@
+<div class="trainerContainer" ng-controller="trainersController">
+	<div class="row clearfix main">
+		<div id="main-trainerContainer">
+
+
+
+			<div class="row clearfix browse">
+				<div class="browse-trainerContainer col-md-12 column">
+					<div ng-repeat="trainer in trainers | filter:selected" ng-click="showTrainer(TrainerID._id)" class="block-trainerContainer move-animation">
+						<div class="browse-block">
+							
+							<img class="imgHeader" src="css/img/trainer.jpg">
+							<div class="title-trainerContainer">
+								<h2 class="title">{{trainer.local.name}}</h2>
+
+								<button class="bn" ng-click="$location.path('/#/messages');">Send email</button>
+
+							</div>
+							<div class="info-text"> I work in WorldClass and im mostly working with bodybuilders and fitness. If you want to win, im your guy!</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+

@@ -1,0 +1,25 @@
+<div id="about">
+	<h2>{{ recipe.title }}</h2>
+	<aside class="left">
+		<img src="../image.jpg" alt="Recipe photo">
+	</aside>
+	<aside class="rigt">
+		<p>Submitted by: {{ InUser.local.name }}</p>
+		<p>Listed as:</p>
+		<ul ng-repeat="tag in recipe.tags">
+			<li>{{ tag }}</li>
+		</ul>
+	</aside>
+</div>
+<div id="main">
+	<p>{{recipe.body}}</p>
+	<ul ng-repeat="ingredient in recipe.ingredients">
+		<li>{{ingredient.amount}} {{ingredient.unit}} {{ingredient.produce}}</li>
+	</ul>
+</div>
+<div id="steps">
+	<p>Steps:</p>
+	<ul ng-repeat="steps in recipe.steps">
+		<p>{{steps.body}}</p>		
+	</ul>
+</div>

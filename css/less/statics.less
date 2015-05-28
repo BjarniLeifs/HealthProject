@@ -1,0 +1,101 @@
+#content {
+	padding-top: 5px;
+
+	.nav-tabs {
+		padding-left: 10px;
+
+		& > li {
+			cursor: pointer;
+		}
+	}
+
+	.row {
+		position: relative;
+		.plot-container {
+			height: 500px;
+			margin: 15px 0px 0px 20px;
+			border: 1px solid gray;
+			padding: 10px 10px 10px 10px;
+			border-radius: 5px;
+			margin-top: 25px;
+			clear: both;
+
+			.chart {
+				width: 100%;
+				height: 100%;
+			}
+
+			div.jqplot-image-container {
+			    display: none;
+			    background-color: #fff;
+			    border: 1px solid #999;
+			    display: inline-block;
+			    margin-top: 25px;
+			    clear: both;
+			}
+
+			div.jqplot-image-container-header {
+			    font-size: 1.0em;
+			    font-weight: bold;
+			    padding: 5px 15px;
+			    background-color: #eee;
+			}
+
+			div.jqplot-image-container-content {
+			    padding: 15px;
+			}
+
+			a.jqplot-image-container-close {
+			    float: right;
+			}
+
+			.jqplot-title {
+				font-size: 1.6em;
+				line-height: 21px;
+			}
+		}
+
+		.button-container {
+			width: 23%;
+			margin-top: 25px;
+			position: absolute;
+			right: 0;
+
+			button {
+				width: 200px;
+			}
+		}
+	}
+}
+
+.button-checkbox {
+	button {
+		border-color: #ccc;
+		height: 35px;
+		text-decoration: none;
+		margin: 5px;
+		color: #565446;
+		background: #fcfcfc;
+		background-image: -moz-linear-gradient(100% 40% 270deg, #ffffff, #eaeaea, #f5f5f5 100%);
+		background-image: -webkit-gradient(linear, 0% 45%, 0% 69%, from(#ffffff), to(#ededed), color-stop(0.4, #f7f7f7));
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		-moz-box-shadow: #c0bca7 0px 1px 0px;
+		-webkit-box-shadow: #c0bca7 0px 1px 0px;
+		box-shadow: #c0bca7 0px 1px 0px;
+		-webkit-transition: all 0.3s ease-out;
+		opacity: .5;
+		float: right;
+		text-align: left;
+		outline: none;
+
+		&.active {
+			opacity: 1;
+			color: #000;
+			background-color: #fcfcfc;
+			border-color: #ccc;
+			outline: none;
+		}
+	}
+}

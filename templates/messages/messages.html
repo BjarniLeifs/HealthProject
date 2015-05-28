@@ -1,0 +1,18 @@
+<div id="MessageContainer" ng-controller="messagesController">
+	<button type="button" class="bn btn-labeled bn-info">
+		<span class="btn-label"><i class="glyphicon glyphicon-refresh"></i>
+		</span>Refresh
+	</button>
+	<button type="button" class="bn btn-labeled bn-danger">
+		<span class="btn-label"><i class="glyphicon glyphicon-trash"></i>
+		</span>Trash
+	</button></th> <p> vantar betri takka hér fyrir ofan, kannski staðsetja þá annarsstaðar</p>
+	<tabset>	
+
+		<tab ng-repeat="tab in tabs" heading="{{tab.name}}" active="tab.active" >
+			<div ng-include="tab.url"></div>
+		</tab>
+
+
+	</tabset>
+</div>

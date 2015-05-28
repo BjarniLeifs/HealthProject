@@ -1,0 +1,45 @@
+API:
+
+User:
+
+	POST: '/api/login'
+	  	Takes email and password 
+	  	checks if it is correct and logs in if it is.
+
+	POST: '/api/register'
+	  	Takes email, password and username
+	  	Adds the user to the user collection and creates a profile from it.
+
+	GET: '/logout'
+    	Logs out a user
+
+
+Profile:
+
+	PUT: '/api/profile/update'
+		Takes firstName, lastName, birthDay, height, weight
+		Finds the right profile based on the user and updates the profile with the new data.
+		Returns status 200 "Profile updated"
+
+	GET: '/api/profile/:name'
+		Takes a "name" variable in the path.
+		Returns the public profile of the appropriate user.
+
+	GET: '/api/isLoggedIn'
+		Returns status 200 if success, else it redirects to '/'
+
+Food:
+	
+	GET: '/api/food/getByName/:name'
+		Takes a "name" variable in the path.
+		Returns all food matching the name.
+
+
+Blog:
+
+	POST: '/api/blog'
+		Takes title, body and tags explicitly, author implicitly.
+		Adds a new blog to the Blog collection, setting votes and favs to 0 and edited to false.
+
+	GET: '/api/blog'
+		Returns all blogs ordered by title in descending order.

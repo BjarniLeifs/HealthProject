@@ -1,0 +1,4 @@
+dependencies: {
+    "angular-ui-chart": "latest",
+    "angular-ui-calendar": "latest"
+}

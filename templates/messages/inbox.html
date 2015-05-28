@@ -1,0 +1,38 @@
+<div class="tab-pane active" id="inbox">
+	<table class="table table-condensed table-hover">
+		<thead>
+			<tr>
+				<th class="span1"><input type="checkbox">					
+					<th class="span2"></th>
+					<th class="span2"></th>
+					<th class="span9"></th>
+					<th class="span2"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="message in messages">
+				
+					<td>
+						<input type="checkbox"> 
+						<a href="#">
+							<i class="icon-star-empty"></i>
+						</a>
+					</td>
+					<td>
+						<strong>{{message.senName}}</strong>
+					</td>
+					<td>
+						<span class="pull-right">{{message.title}}</span>
+					</td>
+					<td>
+						<td>{{message.message}}
+						</td>
+					</td>
+					<td>
+						<strong>{{message.date}}</strong>
+					</td>
+
+				</tr>
+			</tbody>
+		</table>
+	</div>	
