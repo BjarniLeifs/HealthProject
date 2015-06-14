@@ -85,7 +85,8 @@ app.controller("browseController", ["$scope", "$location", "foodFactory", functi
 	$scope.checkName = function(value) {
 		if(value !== undefined && value !== null)
 			return value;
-
+		console.log("this: value returned in checkName:");
+		console.log(value);
 		return '-';
 	};
 
