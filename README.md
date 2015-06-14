@@ -13,8 +13,8 @@
 
 # How to setup matis database in mongo
 	
-	Windows: mongoimport.exe --db jBerry --collection matis --file \path\to\matisDbNoldICE.json --jsonArray
-	unix: mongoimport --db jBerry --collection matis --file /path/to/matisDbNoldICE.json --jsonArray
+	Windows: mongoimport.exe --db jBerry --collection matis --file \path\to\foods.json --jsonArray
+	unix: mongoimport --db jBerry --collection matis --file /path/to/foods.json --jsonArray
 
 	notice: you must be running mongod when you run mongoimport.exe
 	
